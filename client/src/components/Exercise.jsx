@@ -1,7 +1,7 @@
 export default function Exercise() {
   return (
     <div>
-      Hi
+      This is my Exercise
     </div>
   )
 }

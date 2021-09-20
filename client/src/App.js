@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import { Route } from 'react-router-dom'
 // import Work from './components/Work'
 // import Health from './components/Health'
-// import Exercise from './components/Exercise'
+import Exercise from './components/Exercise'
 // import General from './components/General'
 import Home from './components/Home'
 // import AllTodo from './components/AllTodo'
@@ -20,19 +20,19 @@ function App() {
       <Route exact path="/">
         < Home />
       </Route>
-      <Route path="/">
+      <Route path="/work">
         <div> Work</div>
       </Route>
-      <Route path="/">
+      <Route path="/health">
         <div> Health </div>
       </Route>
-      <Route path="/">
-        <div> Exercise </div>
+      <Route path="/exercise">
+        <Exercise />
       </Route>
-      <Route path="/">
+      <Route path="/general">
         <div> General </div>
       </Route>
-      <Route path="/">
+      <Route exact path="/alltodo">
         <div> AllTodo </div>
     </Route>
     </div>
