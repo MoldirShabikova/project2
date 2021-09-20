@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import { Route } from 'react-router-dom'
-// import Work from './components/Work'
+import Work from './components/Work'
 // import Health from './components/Health'
 import Exercise from './components/Exercise'
 // import General from './components/General'
@@ -21,7 +21,7 @@ function App() {
         < Home />
       </Route>
       <Route path="/work">
-        <div> Work</div>
+        < Work />
       </Route>
       <Route path="/health">
         <div> Health </div>
