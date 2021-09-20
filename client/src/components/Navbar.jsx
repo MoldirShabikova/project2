@@ -5,11 +5,11 @@ export default function Navbar() {
       <Link to="/">
       </Link>
      <Link to='/'> Home</Link>
-      <Link to='/work'> Work </Link> 
-      <Link to='/exercise'> Exercise </Link>
-      <Link to='/health'> Health </Link>
-      <Link to='/general'> General </Link>
-      <Link to='/alltodo'> AllTodo </Link>
+      <Link to='/todo/ work'> Work </Link> 
+      <Link to='/todo/ exercise'> Exercise </Link>
+      <Link to='/todo/ health'> Health </Link>
+      <Link to='/todo/ general'> General </Link>
+      <Link to='/todo/ all'> AllTodo </Link>
     </div>
   )
 }

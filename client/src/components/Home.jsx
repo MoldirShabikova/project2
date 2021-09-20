@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import {useEffect , useState} from 'react'
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
@@ -12,33 +13,26 @@ const config = {
 };
 console.log(URL)
 export default function Home() {
-  axios.get(URL, config);
-  return <div>List</div>
+  const [todo, setTodo] = useState([])
+  useEffect(() => {
+    const fetchTodo = async () => {
+      const res = await axios.get(URL, config)
+      setTodo(res.data.records);
+    };
+    fetchTodo();
+  }, []);
 
-  
-  // const [todo, setTodo] = useState([])
-  // const [loading, setLoading] = useState(true)
-  //     useEffect(()=> {
-  //       const fetchTodo = async () => {
-         
-  //         const res = await axios.get(URL, config)
-  //         setTodo(res);
-  //       }
-  //       fetchTodo();
-  //     }, [])
-  // // if (loading) return <div></div>
-    
-  // // return (
-  // //   <div>
-  // //     Home
-  // //     {todo.map((item) => {
-  // //       return (
-  // //         <div>
-  // //           {item.fields.item}
-  // //         </div>
-  // //       )
-  // //     })}
-  // //   </div>
-    
-  // // )
+  return (
+    <div>
+      <div>
+        {todo.map(todo => {
+          return <Link to={`/todo/${todo.id}`} key={todo.id}>
+            <h3>{todo.fields.item}</h3>
+
+            <h5>{todo.fields.category}</h5>
+          </Link>
+        } )}
+      </div>
+    </div>
+  )
 }
