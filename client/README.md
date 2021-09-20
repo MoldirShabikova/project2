@@ -1,3 +1,66 @@
+# Project Overview
+
+View -
+
+## Project Name
+
+ToDo App
+
+## Project Description
+
+- Users can create own todo lists
+- Will have organized categories
+- Will be able delete and add new one
+
+## Wireframes
+
+<https://whimsical.com/todo-app-FRTbc4V1oFBcXpo35RNkrE>
+
+## API and Data Sample
+
+<https://api.airtable.com/v0/appdtddwvXlZlECIz/todo>
+
+## Component Hierarchy
+
+<https://whimsical.com/todo-app-FRTbc4V1oFBcXpo35RNkrE>
+
+### MVP
+
+- A user is able to choose category and add new list
+- A user is able to see full list
+- A user is able to update and delete
+
+#### PostMVP
+
+- A user is will be able to add new category
+
+## Project Schedule
+
+| Day             | Deliverable                                  | Status     |
+| --------------- | -------------------------------------------- | ---------- |
+| September 16-17 | Prompt / Wireframes / Timeframes             | Complete   |
+| September 17    | Project Approval                             | Complete   |
+| September 20    | Core Application Structure (HTML, CSS, etc.) | Incomplete |
+| September 21    | Pseudocode / actual code                     | Incomplete |
+| September 22    | Initial Clickable Model                      | Incomplete |
+| September 23    | MVP                                          | Incomplete |
+| September 24    | Presentations                                | Incomplete |
+
+## Timeframes
+
+| Component                                                 | Priority | Estimated Time | Time Invested | Actual Time |
+| --------------------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Airtable setup                                            |    H     |      3hrs      |     4hrs      |    4hrs     |
+| Create react-app, and add url along with keys             |    H     |      0hrs      |     0hrs      |    0hrs     |
+| Airtable add info                                         |    H     |      0hrs      |     0hrs      |    0hrs     |
+| Search bar                                                |    H     |      0hrs      |     0hrs      |    0hrs     |
+| Main page with ikons                                      |    H     |      0hrs      |     0hrs      |    0hrs     |
+| Add Item "Post"                                           |    H     |      0hrs      |     0hrs      |    0hrs     |
+| CSS                                                       |    H     |      0hrs      |     0hrs      |    0hrs     |
+| Apply design for small devices                            |    H     |      0hrs      |     0hrs      |    0hrs     |
+| Apply design and make it user friendly with correct logic |    H     |      0hrs      |     0hrs      |    0hrs     |
+| Total                                                     |    H     |     0 hrs      |     0hrs      |    0hrs     |
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
