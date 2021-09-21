@@ -12,24 +12,40 @@ const config = {
   },
 };
 console.log(URL)
-export default function Home() {
-  const [todo, setTodo] = useState([])
-  useEffect(() => {
-    const fetchTodo = async () => {
-      const res = await axios.get(URL, config)
-      setTodo(res.data.records);
-    };
-    fetchTodo();
-  }, []);
+export default function Home(props) {
+  const { todo } = props;
+
+  // const [todo, setTodo] = useState([])
+  // useEffect(() => {
+  //   const fetchTodo = async () => {
+  //     const res = await axios.get(URL, config)
+  //     setTodo(res.data.records);
+  //   };
+  //   fetchTodo();
+  // }, []);
+
+
+  const checkCategory = (item)=>{
+    if (item === 'exercise') {
+      return (
+        <img src="https://img.icons8.com/ios/100/000000/exercise.png"/>
+      )
+    }
+    if (item === 'work') {
+      return (
+        <img src="https://img.icons8.com/glyph-neue/64/000000/computer.png"/>
+    )
+   }
+  }
 
   return (
     <div>
       <div>
         {todo.map(todo => {
-          return <Link to={`/todo/${todo.id}`} key={todo.id}>
-            <h3>{todo.fields.item}</h3>
-
-            <h5>{todo.fields.category}</h5>
+          return <Link to={`/todo/${todo.fields.category}`} key={todo.id}>
+            {/* <h3>{todo.fields.item}</h3> */}
+            {checkCategory(todo.fields.category)}
+            {/* <h5>{todo.fields.category}</h5> */}
           </Link>
         } )}
       </div>

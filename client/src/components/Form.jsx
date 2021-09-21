@@ -2,7 +2,7 @@
 
 export default function Form(props) {
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={props.handleSubmit}>
       <label> Item</label>
       <input
         type="text"
@@ -17,7 +17,7 @@ export default function Form(props) {
         onChange={(e) => props.setCategory(e.target.value)}
         />
     <br />
-      <Button>{ props.type} New List</Button>
+      <button>{ props.type} New List</button>
    </form>
   )
 }
