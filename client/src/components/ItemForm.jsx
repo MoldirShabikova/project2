@@ -1,5 +1,6 @@
 import { useState } from "react";
-import axios from 'axios'  
+import axios from 'axios'
+import {useParams} from "react-router-dom"
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${BASE}/todo`
@@ -9,17 +10,20 @@ const config = {
     Authorization: `Bearer ${KEY}`,
   },
 };
-export default function ItemToDo(props) {
+export default function ItemForm(props) {
   const [item, setItem] = useState("");
-  const [category, setCategory] = useState('');
+  const params = useParams();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setCategory(props.category)
+console.log(params.id)
+
     const fields = {
       item,
-      category,
+      category: params.id,
     }
+    console.log(fields)
     const res = await axios.post(URL, { fields }, config);
+    props.setToggle(toggle=>!toggle)
   }
 
   return (

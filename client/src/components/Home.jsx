@@ -6,6 +6,8 @@ const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${BASE}/todo`
 
+
+
 const config = {
   headers: {
     Authorization: `Bearer ${KEY}`,
@@ -14,7 +16,7 @@ const config = {
 console.log(URL)
 export default function Home(props) {
   const { todo } = props;
-
+ 
 
   const checkCategory = (item)=>{
     if (item === 'exercise') {
@@ -41,7 +43,8 @@ export default function Home(props) {
 
   return (
     <div>
-      <div>
+      <div className="HomeImage">
+        
         {todo.map(todo => {
           return <Link to={`/todo/${todo.fields.category}`} key={todo.id}>
             {/* <h3>{todo.fields.item}</h3> */}

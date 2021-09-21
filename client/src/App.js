@@ -20,13 +20,14 @@ const config = {
 function App() {
 
   const [todo, setTodo] = useState([])
+  const [toggle,setToggle] = useState(false)
 useEffect(() => {
   const fetchTodo = async () => {
     const res = await axios.get(URL, config)
     setTodo(res.data.records);
   };
   fetchTodo();
-}, []);
+}, [toggle]);
   return (
     <div className="App">
         <Navbar />
@@ -34,7 +35,8 @@ useEffect(() => {
         < Home todo={ todo}/>
       </Route>
       <Route exact path="/todo/:id">
-        < Todo todo={ todo}/>
+        < Todo todo={todo} setToggle={setToggle} />
+        
       </Route>
       <Route exact path="/newTodo">
         < NewTodo/>

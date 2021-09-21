@@ -2,11 +2,16 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* /* .HomeImage{
+background : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyZYPtnOIZpgpllJlp9fBlqMDbdUPGcHSCcvVVY2wFTDl4_ws9ZZT9jgDgJ5T5TdnvSmg&usqp=CAU);
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: contain;
+  */
+/* } */ 
+.HomeImage{
+  background-color: bisque;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
