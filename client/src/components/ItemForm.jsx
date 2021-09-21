@@ -25,6 +25,7 @@ export default function ItemToDo(props) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        <h1>What's the plan for Today?</h1>
       <label> Item</label>
       <input
         type="text"

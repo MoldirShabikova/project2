@@ -15,15 +15,6 @@ console.log(URL)
 export default function Home(props) {
   const { todo } = props;
 
-  // const [todo, setTodo] = useState([])
-  // useEffect(() => {
-  //   const fetchTodo = async () => {
-  //     const res = await axios.get(URL, config)
-  //     setTodo(res.data.records);
-  //   };
-  //   fetchTodo();
-  // }, []);
-
 
   const checkCategory = (item)=>{
     if (item === 'exercise') {
@@ -35,7 +26,17 @@ export default function Home(props) {
       return (
         <img src="https://img.icons8.com/glyph-neue/64/000000/computer.png"/>
     )
+    }
+    if (item === 'general') {
+      return (
+        <img src="https://img.icons8.com/ios-filled/100/000000/todo-list.png"/>
+    )
    }
+    if (item === 'health') {
+      return (
+        <img src="https://img.icons8.com/ios/150/000000/apple-health.png"/>
+    )
+    }
   }
 
   return (

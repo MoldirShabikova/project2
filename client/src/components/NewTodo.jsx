@@ -23,7 +23,7 @@ export default function NewTodo() {
   }
   return (
     <div>
-     <h3>Create your new plan</h3> 
+     <h3>Create your new category</h3> 
       <Form item={item}
         setItem={setItem}
         category={category}
