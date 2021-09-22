@@ -1,5 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Delete from './Delete';
 export default function AllTodo(props) {
   const { todo } = props;
   return (
@@ -7,9 +8,9 @@ export default function AllTodo(props) {
             <div>
         {todo.map(todo => {
           return <Link to={`/todo/${todo.fields.category}`} key={todo.id}>
+            <h2>{todo.fields.category}</h2>
             <h3>{todo.fields.item}</h3>
-
-            <h5>{todo.fields.category}</h5>
+            {/* <Delete id={item.id} /> */}
           </Link>
         } )}
       </div>

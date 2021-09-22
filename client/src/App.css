@@ -1,24 +1,58 @@
-.App {
-  text-align: center;
-}
 
-/* /* .HomeImage{
-background : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyZYPtnOIZpgpllJlp9fBlqMDbdUPGcHSCcvVVY2wFTDl4_ws9ZZT9jgDgJ5T5TdnvSmg&usqp=CAU);
-  background-repeat: no-repeat;
-  background-position: center ;
-  background-size: contain;
-  */
-/* } */ 
-.HomeImage{
-  background-color: bisque;
+.App {
+  height: 1800px;
+  text-align: center;
+  background-color: darkgrey;
+  
 }
-@media (prefers-reduced-motion: no-preference) {
+.input{
+  background-color: rgb(44, 189, 165);
+  border: 0;
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.input::placeholder{
+  color:black;
+}
+.input:focus, button:focus{
+  outline: none;
+}
+.List button{
+  height: 50px;
+  width: 75px;
+  border: 0;
+  background-color: rgb(43, 187, 168);
+  cursor: pointer;
+  font-weight: bolder;
+  color: black;
+  border-radius: 10px
+
+}
+.NewListItem{
+  background-color: rgb(154, 192, 230);
+  min-height: 900px;
+  width: 600px;
+  margin: 40px auto;
+
+}
+ .Navbar{
+   display: flex;
+  justify-content: space-evenly;
+  padding-top: 40px;
+  background-color: rgb(96, 165, 182);
+ 
+ }
+ @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -39,5 +73,5 @@ background : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyZYPtnOI
   }
   to {
     transform: rotate(360deg);
-  }
-}
+  } 
+} */ 

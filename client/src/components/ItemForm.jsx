@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from 'axios'
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
+import { toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${BASE}/todo`
@@ -23,24 +25,21 @@ console.log(params.id)
     }
     console.log(fields)
     const res = await axios.post(URL, { fields }, config);
+    toast("Created New List")
     props.setToggle(toggle=>!toggle)
   }
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="List"onSubmit={handleSubmit}>
         <h1>What's the plan for Today?</h1>
-      <label> Item</label>
-      <input
+      <input className="input"
         type="text"
         value={item}
-        onChange={(e) => setItem(e.target.value)}
-        />
-    <br />
-      <button> Add a new list</button>
+        onChange={(e) => setItem(e.target.value)}/>
+        <button> Add New</button>
+        <br />  
    </form>
-
- 
     </div>
   )
 }

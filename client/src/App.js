@@ -1,12 +1,13 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import { Route } from 'react-router-dom'
-import Home from './components/Home'
+// import Home from './components/Home'
 import Todo from './components/Todo'
 import NewTodo from './components/NewTodo'
 import AllTodo from './components/AllTodo';
 import axios from "axios";
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
+import {ToastContainer} from "react-toastify"
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${BASE}/todo`
@@ -29,10 +30,11 @@ useEffect(() => {
   fetchTodo();
 }, [toggle]);
   return (
+    
     <div className="App">
         <Navbar />
       <Route exact path="/">
-        < Home todo={ todo}/>
+        < Navbar todo={ todo}/>
       </Route>
       <Route exact path="/todo/:id">
         < Todo todo={todo} setToggle={setToggle} />
@@ -41,9 +43,10 @@ useEffect(() => {
       <Route exact path="/newTodo">
         < NewTodo/>
       </Route>
-      <Route exact path="/allTodo">
+      <Route path="/allTodo">
         < AllTodo todo={ todo}/>
       </Route>
+      <ToastContainer/>
     </div>
   );
 }
