@@ -5,6 +5,7 @@ import Delete from "./Delete";
 import { Link } from 'react-router-dom'
 import { toast } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
+import house from '../images/house.png'
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${BASE}/todo`
@@ -55,7 +56,7 @@ console.log(params.id)
         
       )
       })}
-      <Link to="/"> <button>Home</button></Link>
+      <Link to="/"> <button scr={house}>Home</button></Link>
     </div>
   )
 }

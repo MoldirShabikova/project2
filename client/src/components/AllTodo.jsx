@@ -12,8 +12,11 @@ export default function AllTodo(props) {
             <h3>{todo.fields.item}</h3>
             <Delete />
           </Link>
-        } )}
+        })}
+        
       </div>
+      <Link to="/"> <button >Home</button></Link>
     </div>
+    
   )
 }

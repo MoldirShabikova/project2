@@ -1,10 +1,12 @@
 
-.App {
+body {
   height: 1200px;
   text-align: center;
-  background-color: rgb(229, 241, 239);
-  
+ background-image: url("https://www.wallpapertip.com/wmimgs/167-1676208_pattern-abstract-pastel-background.jpg") ; 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .input{
   background-color: rgb(229, 241, 239);
   border: 0;
@@ -33,7 +35,7 @@
 
 }
 .NewListItem{
-  background-color: rgba(39, 98, 235, 0.644);
+  background-color: rgba(194, 194, 194, 0.637);
   min-height: 900px;
   width: 600px;
   margin: 40px auto;
@@ -45,7 +47,7 @@
    display: flex;
   justify-content: space-evenly;
   padding-top: 40px;
-  background-color: rgb(55, 106, 194);
+  background-color: rgb(231, 141, 145);
  }
  h5{
    color:rgb(5, 7, 7)
@@ -55,6 +57,7 @@
   height: 500px;
   padding: 40px;
   margin-top: 30px;
+  text-align: center;
 }
 /* button{
   display: flex;
