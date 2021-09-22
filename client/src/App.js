@@ -1,6 +1,7 @@
 import './App.css';
+import Home from './components/Home';
 import Navbar from './components/Navbar'
-import { Route } from 'react-router-dom'
+import { Route,Switch } from 'react-router-dom'
 import Todo from './components/Todo'
 import NewTodo from './components/NewTodo'
 import AllTodo from './components/AllTodo';
@@ -29,24 +30,24 @@ useEffect(() => {
   fetchTodo();
 }, [toggle]);
   return (
-    
-    <div className="App">
-        <Navbar />
-      <Route exact path="/">
-        < Navbar todo={ todo}/>
+    < >
+      <Navbar></Navbar>
+      <Switch>
+      <Route path="/todo/:id">
+        <Todo todo={todo} setToggle={setToggle} />   
       </Route>
-      <Route exact path="/todo/:id">
-        < Todo todo={todo} setToggle={setToggle} />
-        
-      </Route>
-      <Route exact path="/newTodo">
+      <Route path="/newTodo">
         < NewTodo/>
       </Route>
       <Route path="/allTodo">
         < AllTodo todo={ todo}/>
       </Route>
+      <Route path="/">
+        <Home/>
+      </Route>
       <ToastContainer/>
-    </div>
+      </Switch>
+    </>
   );
 }
 

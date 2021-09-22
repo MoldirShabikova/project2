@@ -2,7 +2,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ItemForm from './ItemForm';
-import Delete from './Delete';
+
 
 export default function Todo(props) {
   const [categoryList, setCategoryList] = useState([]);
@@ -18,17 +18,9 @@ console.log(todo)
   return (
     
     <div className="NewListItem">
-      <ItemForm setToggle = {props.setToggle}    
-      />
-      {categoryList.map((item) =>{
-        return(
-      <div>
-            <h3>{item.fields.item}</h3>
-            <Delete id={item.id} />
-            </div>
-        
-      )
-      })} 
+      <ItemForm setToggle={props.setToggle}
+        categoryList={categoryList}
+      /> 
     </div>
   )}
 

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from 'axios'
 import { useParams } from "react-router-dom"
+import Delete from "./Delete";
+import { Link } from 'react-router-dom'
 import { toast } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
@@ -13,6 +15,7 @@ const config = {
   },
 };
 export default function ItemForm(props) {
+  const [deleted, setDeleted] = useState(false);
   const [item, setItem] = useState("");
   const params = useParams();
   const handleSubmit = async (e) => {
@@ -28,6 +31,8 @@ console.log(params.id)
     toast("Created New List")
     props.setToggle(toggle=>!toggle)
   }
+  
+  
 
   return (
     <div>
@@ -39,7 +44,18 @@ console.log(params.id)
         onChange={(e) => setItem(e.target.value)}/>
         <button> Add New</button>
         <br />  
-   </form>
+      </form>
+      {props.categoryList.map((item) =>{
+        return(
+      <div>
+            <h3>{item.fields.item}</h3>
+            <Delete id={item.id} 
+            setDeleted = {setDeleted}/>
+            </div>
+        
+      )
+      })}
+      <Link to="/"> <button>Home</button></Link>
     </div>
   )
 }
