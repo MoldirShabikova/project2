@@ -10,7 +10,7 @@ export default function AllTodo(props) {
           return <Link to={`/todo/${todo.fields.category}`} key={todo.id}>
             <h2>{todo.fields.category}</h2>
             <h3>{todo.fields.item}</h3>
-            {/* <Delete id={item.id} /> */}
+            <Delete />
           </Link>
         } )}
       </div>

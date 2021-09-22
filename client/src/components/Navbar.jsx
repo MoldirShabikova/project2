@@ -13,19 +13,19 @@ export default function Navbar() {
     <div>
       <div className="Navbar">
         <Link to="/todo/exercise"><img src={running} alt="running"/>
-        <h3>EXERCISE</h3>
+        <h5>EXERCISE</h5>
         </Link>
         <Link to="/todo/work"><img src={work} alt="work"/>
-        <h3>WORK</h3>
+        <h5>WORK</h5>
         </Link>
         <Link to="/todo/health"><img src={healthcare} alt="health"/>
-        <h3>HEALTH</h3>
+        <h5>HEALTH</h5>
         </Link>
         <Link to="/todo/general"><img src={note} alt="note"/>
-        <h3>TO DO</h3>
+        <h5>TO DO</h5>
         </Link>
         <Link to="/allTodo"><img src={list} alt="list"/>
-        <h3>SEE ALL</h3>
+        <h5>SEE ALL</h5>
         </Link>
         {/* <Link to="/newTodo"><img src={list} alt="list"/>
         <h3>NEW CATEGORY</h3>

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useState } from "react";
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${BASE}/todo`
@@ -12,6 +13,7 @@ const config = {
 
 
 export default function Delete(props) {
+  const [toggle,setToggle] = useState(false)
   const handleDelete = async () => {
     await DeleteButton(props.id)
 
@@ -19,6 +21,7 @@ export default function Delete(props) {
     
   const DeleteButton = async (id ) =>{
     const res = await axios.delete(`${URL}/${id}`, config)
+    props.setToggle(toggle=>!toggle)
     return(
       res.data.records
     )

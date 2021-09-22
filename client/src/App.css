@@ -1,12 +1,12 @@
 
 .App {
-  height: 1800px;
+  height: 1200px;
   text-align: center;
-  background-color: darkgrey;
+  background-color: rgb(229, 241, 239);
   
 }
 .input{
-  background-color: rgb(44, 189, 165);
+  background-color: rgb(229, 241, 239);
   border: 0;
   width: 200px;
   height: 50px;
@@ -25,7 +25,7 @@
   height: 50px;
   width: 75px;
   border: 0;
-  background-color: rgb(43, 187, 168);
+  background-color: rgb(229, 241, 239);
   cursor: pointer;
   font-weight: bolder;
   color: black;
@@ -33,18 +33,22 @@
 
 }
 .NewListItem{
-  background-color: rgb(154, 192, 230);
+  background-color: rgba(39, 98, 235, 0.644);
   min-height: 900px;
   width: 600px;
   margin: 40px auto;
+  font-style: italic;
 
 }
  .Navbar{
+ 
    display: flex;
   justify-content: space-evenly;
   padding-top: 40px;
-  background-color: rgb(96, 165, 182);
- 
+  background-color: rgb(142, 175, 231);
+ }
+ h5{
+   color:rgb(5, 7, 7)
  }
  @media (prefers-reduced-motion: no-preference) {
   .App-logo {

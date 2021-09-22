@@ -1,7 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import { Route } from 'react-router-dom'
-// import Home from './components/Home'
 import Todo from './components/Todo'
 import NewTodo from './components/NewTodo'
 import AllTodo from './components/AllTodo';

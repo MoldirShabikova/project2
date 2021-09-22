@@ -23,7 +23,7 @@ console.log(todo)
       {categoryList.map((item) =>{
         return(
       <div>
-        <h1>{item.fields.item}</h1>
+            <h3>{item.fields.item}</h3>
             <Delete id={item.id} />
             </div>
         
