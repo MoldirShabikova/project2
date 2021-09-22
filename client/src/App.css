@@ -59,6 +59,37 @@ body {
   margin-top: 30px;
   text-align: center;
 }
+.New-list{
+  width: 400px;
+  height: 50px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: rgb(241, 242, 245);
+  color:rgb(132, 148, 240)
+}
+.New-list h3{
+  padding: 10px;
+  position: relative;
+}
+
+
+.delete-btn{
+  /* position: absolute; */
+  /* display: flex;
+  align-content: flex-end;
+  right: 10px; */
+  cursor: pointer;
+  margin: -35px 0 200px 350px;
+}
+.faicons{
+  margin: 0 5px;
+  font-size: 15px;
+  display: flex;
+  align-self: flex-end;
+}
+.icon-btn{
+  height: 30px;
+}
 /* button{
   display: flex;
   align-items: center;

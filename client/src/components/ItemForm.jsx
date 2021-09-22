@@ -4,8 +4,10 @@ import { useParams } from "react-router-dom"
 import Delete from "./Delete";
 import { Link } from 'react-router-dom'
 import { toast } from "react-toastify"
-import 'react-toastify/dist/ReactToastify.css';
 import house from '../images/house.png'
+
+
+
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${BASE}/todo`
@@ -48,15 +50,18 @@ console.log(params.id)
       </form>
       {props.categoryList.map((item) =>{
         return(
-      <div>
-            <h3>{item.fields.item}</h3>
-            <Delete id={item.id} 
+      <div className="New-list">
+            <h3 >{item.fields.item}
+              <div className="delete-btn">
+              <Delete id={item.id} 
             setDeleted = {setDeleted}/>
+            </div>
+            </h3>
             </div>
         
       )
       })}
-      <Link to="/"> <button scr={house}>Home</button></Link>
+   <Link to="/"> <button ><i class="fas fa-home"></i></button></Link>
     </div>
   )
 }

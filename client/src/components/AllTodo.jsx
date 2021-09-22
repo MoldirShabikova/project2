@@ -15,7 +15,7 @@ export default function AllTodo(props) {
         })}
         
       </div>
-      <Link to="/"> <button >Home</button></Link>
+      <Link to="/"> <button ><i class="fas fa-home"></i></button></Link>
     </div>
     
   )

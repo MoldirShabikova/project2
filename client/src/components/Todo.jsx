@@ -22,5 +22,6 @@ console.log(todo)
         categoryList={categoryList}
       /> 
     </div>
+    
   )}
 

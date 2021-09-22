@@ -7,7 +7,6 @@ import NewTodo from './components/NewTodo'
 import AllTodo from './components/AllTodo';
 import axios from "axios";
 import { useState, useEffect } from 'react'
-import {ToastContainer} from "react-toastify"
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${BASE}/todo`
@@ -45,7 +44,6 @@ useEffect(() => {
       <Route path="/">
         <Home/>
       </Route>
-      <ToastContainer/>
       </Switch>
     </>
   );
