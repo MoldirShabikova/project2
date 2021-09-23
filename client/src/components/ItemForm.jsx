@@ -3,8 +3,8 @@ import axios from 'axios'
 import { useParams } from "react-router-dom"
 import Delete from "./Delete";
 import { Link } from 'react-router-dom'
-import { toast } from "react-toastify"
-import house from '../images/house.png'
+
+
 
 
 
@@ -31,7 +31,7 @@ console.log(params.id)
     }
     console.log(fields)
     const res = await axios.post(URL, { fields }, config);
-    toast("Created New List")
+    setItem('')
     props.setToggle(toggle=>!toggle)
   }
   
@@ -50,18 +50,18 @@ console.log(params.id)
       </form>
       {props.categoryList.map((item) =>{
         return(
-      <div className="New-list">
-            <h3 >{item.fields.item}
-              <div className="delete-btn">
+          <div className="New-list">
+            <h3>{item.fields.item}
+              <div className="delete-btn">  
               <Delete id={item.id} 
-            setDeleted = {setDeleted}/>
+                setDeleted={setDeleted} />
+              
             </div>
-            </h3>
+            </h3> 
             </div>
-        
-      )
-      })}
-   <Link to="/"> <button ><i class="fas fa-home"></i></button></Link>
+        )
+        })}
+    {/* <Link to="/"> <button ><i class="fas fa-home"></i></button></Link> */}
     </div>
-  )
+  ) 
 }

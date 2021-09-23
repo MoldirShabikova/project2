@@ -28,11 +28,10 @@ ToDo App
 
 - A user is able to choose category and add new list
 - A user is able to see full list
-- A user is able to update and delete
 
 #### PostMVP
 
-- A user is will be able to add new category
+- A user is able to update and delete
 
 ## Project Schedule
 

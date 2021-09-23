@@ -27,9 +27,6 @@ export default function Navbar() {
         <Link to="/allTodo"><img src={list} alt="list"/>
         <h5>SEE ALL</h5>
         </Link>
-        {/* <Link to="/newTodo"><img src={list} alt="list"/>
-        <h3>NEW CATEGORY</h3>
-        </Link> */}
       </div>
     </div>
   )

@@ -35,9 +35,6 @@ useEffect(() => {
       <Route path="/todo/:id">
         <Todo todo={todo} setToggle={setToggle} />   
       </Route>
-      <Route path="/newTodo">
-        < NewTodo/>
-      </Route>
       <Route path="/allTodo">
         < AllTodo todo={ todo}/>
       </Route>

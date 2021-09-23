@@ -2,6 +2,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ItemForm from './ItemForm';
+import { Link } from 'react-router-dom'
 
 
 export default function Todo(props) {
@@ -20,7 +21,9 @@ console.log(todo)
     <div className="NewListItem">
       <ItemForm setToggle={props.setToggle}
         categoryList={categoryList}
-      /> 
+      />
+       <Link to="/"> <button ><i class="fas fa-home"></i></button></Link>
+          
     </div>
     
   )}
