@@ -1,13 +1,7 @@
 import { useState } from "react";
 import axios from 'axios'
-import { useParams } from "react-router-dom"
+import { useParams,Link } from "react-router-dom"
 import Delete from "./Delete";
-import { Link } from 'react-router-dom'
-
-
-
-
-
 const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${BASE}/todo`
@@ -18,9 +12,10 @@ const config = {
   },
 };
 export default function ItemForm(props) {
-  const [deleted, setDeleted] = useState(false);
+  const [ setDeleted] = useState(false);
   const [item, setItem] = useState("");
   const params = useParams();
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 console.log(params.id)
@@ -34,8 +29,7 @@ console.log(params.id)
     setItem('')
     props.setToggle(toggle=>!toggle)
   }
-  
-  
+ 
 
   return (
     <div>
@@ -48,20 +42,32 @@ console.log(params.id)
         <button> Add New</button>
         <br />  
       </form>
+     
       {props.categoryList.map((item) =>{
         return(
-          <div className="New-list">
-            <h3>{item.fields.item}
+          <div className="New-list" key={item.key}>
+            <p>{item.fields.item}</p>
+            <Link to={`/Edit/${item.id}`}><button>Edit</button>  </Link>
+            
+            {/* <h3>
+              <input type="text"
+                id={item.key}
+                value={item.fields.item}
+                onChange={
+                  (e) => {
+                    props.setUpdate(e.target.value, item.key)
+                  }
+                  
+                }
+              /> */}
               <div className="delete-btn">  
               <Delete id={item.id} 
                 setDeleted={setDeleted} />
-              
             </div>
-            </h3> 
+            {/* </h3>  */}
             </div>
         )
         })}
-    {/* <Link to="/"> <button ><i class="fas fa-home"></i></button></Link> */}
     </div>
   ) 
 }

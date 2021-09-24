@@ -8,13 +8,11 @@ export default function AllTodo(props) {
             <div >
         {todo.map(todo => {
           return <Link to={`/todo/${todo.fields.category}`} key={todo.id}>
-            <h2>{todo.fields.category}</h2>
-            <h3>{todo.fields.item}</h3>
-         
+            <h3>{todo.fields.category}</h3>
+            <p>{todo.fields.item}</p>
           </Link>
         })} 
       </div>
-      <Link to="/"> <button ><i class="fas fa-home"></i></button></Link>
     </div>
   )
 }

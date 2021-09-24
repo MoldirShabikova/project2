@@ -35,7 +35,7 @@ body {
 
 }
 .NewListItem{
-  background-color: rgba(194, 194, 194, 0.637);
+  background-color: rgba(166, 220, 236, 0.808);
   min-height: 900px;
   width: 750px;
   margin: 40px auto;
@@ -48,7 +48,7 @@ body {
  
    display: flex;
   justify-content: space-evenly;
-  padding-top: 40px;
+  padding-top: 20px;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   overflow: hidden;
@@ -81,7 +81,15 @@ body {
   padding: 10px;
   position: relative;
 }
-
+.New-list input{
+  background-color: transparent;
+  border: 0;
+  color: black;
+  font-size: 18px
+}
+.New-list input:focus{
+  outline: none;
+}
 
 .delete-btn{
   /* position: absolute; */
@@ -102,7 +110,13 @@ body {
 }
 
 .all-todo{
-  text-decoration: green;
+  background-color: rgba(194, 194, 194, 0.637);
+  min-height: 900px;
+  width: 1250px;
+  margin: 40px auto;
+  font-style: italic;
+  border-radius: 15px;
+  box-shadow: 2px 7px 18px -12px;
 }
 
 

@@ -8,26 +8,19 @@ const config = {
     Authorization: `Bearer ${KEY}`,
   },
 };
-
-
-
 export default function Delete(props) {
-
   const handleDelete = async () => {
     await DeleteButton(props.id)
-    // props.setDeleted(prevState=>!prevState)
     window.location.reload()
-  }
-    
+  } 
   const DeleteButton = async (id ) =>{
     const res = await axios.delete(`${URL}/${id}`, config)
-    return(
-      res
+    return(res
     )
   }
   return (
     <div>
-      <button onClick={handleDelete} > <i class="far fa-trash-alt"></i></button>
+      <button onClick={handleDelete} > <i className="far fa-trash-alt"></i></button>
     </div>
   )
 }

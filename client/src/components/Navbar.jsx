@@ -5,7 +5,7 @@ import running from "../images/running.png"
 import work from "../images/work.png"
 import note from "../images/note.png"
 import list from "../images/list.png"
-
+import house from "../images/house.png"
 export default function Navbar() {
 
  
@@ -26,6 +26,9 @@ export default function Navbar() {
         </Link>
         <Link to="/allTodo"><img src={list} alt="list"/>
         <h5>SEE ALL</h5>
+        </Link>
+        <Link to="/"><img src={house} alt="home" />
+          <h5>HOME</h5>
         </Link>
       </div>
     </div>
