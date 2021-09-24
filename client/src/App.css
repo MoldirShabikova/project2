@@ -45,7 +45,6 @@ body {
 
 }
  .Navbar{
- 
    display: flex;
   justify-content: space-evenly;
   padding-top: 20px;
@@ -53,12 +52,8 @@ body {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 2px 10px 18px -12px; color: rgb(10, 10, 10);
-  
+ }
 
- }
- .Navbar:hover{
-  
- }
  h5{
    color:rgb(5, 7, 7)
  }
@@ -72,10 +67,12 @@ body {
 .New-list{
   width: 400px;
   height: 50px;
+   padding: 10px 20px;
+  font-size: 18px;
   margin: 20px auto;
   border-radius: 10px;
   background-color: rgb(241, 242, 245);
-  color:rgb(132, 148, 240)
+  color:rgb(0, 0, 0)
 }
 .New-list h3{
   padding: 10px;
@@ -92,22 +89,23 @@ body {
 }
 
 .delete-btn{
-  /* position: absolute; */
-  /* display: flex;
-  align-content: flex-end;
-  right: 10px; */
-  cursor: pointer;
-  margin: -35px 0 200px 350px;
-}
-.faicons{
-  margin: 0 5px;
-  font-size: 15px;
   display: flex;
-  align-self: flex-end;
+  position: relative;
+  /* right: 500px; */
+
+
+  /* margin: -178px 0 0px 280px; */
 }
-.icon-btn{
-  height: 30px;
+
+.edit-btn{
+  /* margin: -10px -20px 90px 250px; */
+  display: flex;
+  margin-top: -70px;
+  position: absolute;
+  right: 500px;
+  
 }
+
 
 .all-todo{
   background-color: rgba(194, 194, 194, 0.637);
@@ -117,22 +115,31 @@ body {
   font-style: italic;
   border-radius: 15px;
   box-shadow: 2px 7px 18px -12px;
+
 }
 
+@media screen and (min-width: 992px){
 
+}
 
+@media (max-width: 812px) {
+  body{
+    display: flex;
+    justify-content: space-around;
+  }
+  .NewListItem{
+    display: flex;
+    max-height: 350px;
+    max-width: 300px;
+  }
 
+}
 
-
-
-
-
-
- @media (prefers-reduced-motion: no-preference) {
+ /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 /* .App-header {
   background-color: #282c34;

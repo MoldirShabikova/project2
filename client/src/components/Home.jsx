@@ -29,7 +29,7 @@ export default function Home() {
     <div className="HomePage">
       <div className="quoteBox">
         <div className="container">
-          <div className="qouteButton"><button onClick={quoteAPI}>GET QUOTES</button></div>
+          <div className="qouteButton"><button className="btnQuo"onClick={quoteAPI}>GET QUOTES</button></div>
           <div className="quote"><h2>{quote}</h2> </div>
           <div className="author"> {author}</div>
       </div>

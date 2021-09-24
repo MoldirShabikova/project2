@@ -47,7 +47,7 @@ console.log(params.id)
         return(
           <div className="New-list" key={item.key}>
             <p>{item.fields.item}</p>
-            <Link to={`/Edit/${item.id}`}><button>Edit</button>  </Link>
+            <Link to={`/Edit/${item.id}`}><button className="edit-btn"><i class="far fa-edit"></i></button>  </Link>
             
             {/* <h3>
               <input type="text"

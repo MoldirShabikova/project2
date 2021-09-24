@@ -19,7 +19,7 @@ export default function Delete(props) {
     )
   }
   return (
-    <div>
+    <div className>
       <button onClick={handleDelete} > <i className="far fa-trash-alt"></i></button>
     </div>
   )
