@@ -1,11 +1,10 @@
-import React, { useState } from "react"
-import axios from "axios"
-import quote from "./Quote.css"
+import React, { useState } from "react";
+import axios from "axios";
+import quote from "./Quote.css";
 import { useEffect } from "react/cjs/react.development";
 export default function Home() {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
-
 
   const quoteAPI = async () => {
     let arrayOfquotes = [];
@@ -13,13 +12,13 @@ export default function Home() {
       const data = await axios.get("https://api.quotable.io/random");
       arrayOfquotes = data.data;
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
     try {
-      setQuote(arrayOfquotes.content)
-      setAuthor(arrayOfquotes.author)
+      setQuote(arrayOfquotes.content);
+      setAuthor(arrayOfquotes.author);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
   useEffect(() => {
@@ -29,16 +28,18 @@ export default function Home() {
     <div className="HomePage">
       <div className="quoteBox">
         <div className="container">
-          <div className="qouteButton"><button className="btnQuo"onClick={quoteAPI}>GET QUOTES</button></div>
-          <div className="quote"><h2>{quote}</h2> </div>
+          <div className="qouteButton">
+            <button className="btnQuo" onClick={quoteAPI}>
+              GET QUOTES
+            </button>
+          </div>
+          <div className="quote">
+            <h2>{quote}</h2>{" "}
+          </div>
           <div className="author"> {author}</div>
+        </div>
       </div>
-    </div>
-     
-     
-      
       {/* < img className="HomeImg" src="https://balancethroughsimplicity.com/wp-content/uploads/2020/04/How-to-write-a-To-Do-list-to-get-things-done-BLOG-1-884x619.jpg" alt="Photo"/> */}
     </div>
-  )
+  );
 }
-

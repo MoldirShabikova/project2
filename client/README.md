@@ -31,7 +31,7 @@ ToDo App
 
 #### PostMVP
 
-- A user is able to update and delete
+- A user is able to edit and delete
 
 ## Project Schedule
 

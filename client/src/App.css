@@ -10,7 +10,7 @@ body {
 .input{
   background-color: rgb(229, 241, 239);
   border: 0;
-  width: 200px;
+  width: 280px;
   height: 50px;
   padding: 0 20px;
   margin: 20px;
@@ -37,17 +37,19 @@ body {
 .NewListItem{
   background-color: rgba(166, 220, 236, 0.808);
   min-height: 900px;
-  width: 750px;
+  width: 650px;
   margin: 40px auto;
   font-style: italic;
   border-radius: 15px;
   box-shadow: 2px 7px 18px -12px;
 
 }
+
+
  .Navbar{
    display: flex;
   justify-content: space-evenly;
-  padding-top: 20px;
+  padding-top: 10px;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   overflow: hidden;
@@ -61,23 +63,20 @@ body {
   width: 800px;
   height: 500px;
   padding: 40px;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
 }
 .New-list{
-  width: 400px;
-  height: 50px;
-   padding: 10px 20px;
+  width: 380px;
+  height: 40px;
+   padding: 5px 10px;
   font-size: 18px;
-  margin: 20px auto;
+  margin: 10px auto;
   border-radius: 10px;
   background-color: rgb(241, 242, 245);
   color:rgb(0, 0, 0)
 }
-.New-list h3{
-  padding: 10px;
-  position: relative;
-}
+
 .New-list input{
   background-color: transparent;
   border: 0;
@@ -87,30 +86,22 @@ body {
 .New-list input:focus{
   outline: none;
 }
-
-.delete-btn{
+.New-list p{
+display: flex;
+justify-content: space-between;
+padding-bottom: 40px;
+}
+.buttons{
   display: flex;
+  justify-content: flex-end;
   position: relative;
-  /* right: 500px; */
-
-
-  /* margin: -178px 0 0px 280px; */
+  top: -85px; 
 }
-
-.edit-btn{
-  /* margin: -10px -20px 90px 250px; */
-  display: flex;
-  margin-top: -70px;
-  position: absolute;
-  right: 500px;
-  
-}
-
 
 .all-todo{
   background-color: rgba(194, 194, 194, 0.637);
   min-height: 900px;
-  width: 1250px;
+  width: 750px;
   margin: 40px auto;
   font-style: italic;
   border-radius: 15px;
@@ -124,15 +115,44 @@ body {
 
 @media (max-width: 812px) {
   body{
-    display: flex;
+    display: flexbox;
     justify-content: space-around;
   }
-  .NewListItem{
-    display: flex;
-    max-height: 350px;
-    max-width: 300px;
+  .header{
+    display: flexbox;
+   
+    align-items: stretch;
+   
   }
-
+  .Navbar {
+    display: flex-end;
+    height: 80%;
+    min-width: 130px;
+  }
+  .icons{
+    height: 50px;
+  }
+  .NewListItem{
+    display: flexbox;
+    max-height: 300px;
+    max-width: 350px;
+  }
+  .h1{
+    font-size: 16px;
+  }
+  .New-list{
+    display: flexbox;
+    width: 80%;
+  }
+.all-todo{
+  max-width: 380px;
+}
+.quote-box{
+  max-width: 400px;
+}
+.quoteBox{
+  max-width: 300px;
+}
 }
 
  /* @media (prefers-reduced-motion: no-preference) {
