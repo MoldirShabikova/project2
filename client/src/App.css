@@ -100,7 +100,7 @@ h5 {
   box-shadow: 2px 7px 18px -12px;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1025px) {
   .NewListItem {
     display: flexbox;
     max-height: 450px;
@@ -109,15 +109,14 @@ h5 {
   .quoteBox {
     display: flexbox;
     max-width: 500px;
-    height: 400px;
-    padding-bottom: 80px;
+    /* height: 400px; */
   }
   .btnQuo {
     font-size: 18px;
   }
   .HomeImg {
-    max-width: 650px;
-    max-height: 450px;
+    max-width: 450px;
+    max-height: 350px;
   }
 }
 
@@ -161,10 +160,7 @@ h5 {
   .quoteBox {
     display: flexbox;
     max-width: 270px;
-    height: 380px;
-  }
-  .HomeImg {
-    max-width: 300px;
-    max-height: 250px;
+    height: 400px;
+    top: 100%;
   }
 }
