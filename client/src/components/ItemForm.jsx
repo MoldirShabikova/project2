@@ -24,7 +24,7 @@ export default function ItemForm(props) {
       item,
       category: params.category,
     };
-    const res = await axios.post(URL, { fields }, config);
+    await axios.post(URL, { fields }, config);
     setItem("");
     props.setToggle((toggle) => !toggle);
   };

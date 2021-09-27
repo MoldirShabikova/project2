@@ -20,7 +20,6 @@ export default function EditItem(props) {
     console.log("thisIsUseEffect");
     const fetchItem = async () => {
       const res = await axios.get(`${URL}/${id}`, config);
-      console.log("thisIsData", res.data);
       setItem(res.data.fields.item);
     };
     fetchItem();
