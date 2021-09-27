@@ -1,13 +1,12 @@
-
 body {
   height: 1200px;
   text-align: center;
- background-image: url("https://www.wallpapertip.com/wmimgs/167-1676208_pattern-abstract-pastel-background.jpg") ; 
+  background-image: url("https://www.wallpapertip.com/wmimgs/167-1676208_pattern-abstract-pastel-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.input{
+.input {
   background-color: rgb(229, 241, 239);
   border: 0;
   width: 280px;
@@ -17,13 +16,14 @@ body {
   font-size: 20px;
   border-radius: 10px;
 }
-.input::placeholder{
-  color:black;
+.input::placeholder {
+  color: black;
 }
-.input:focus, button:focus{
+.input:focus,
+button:focus {
   outline: none;
 }
-.List button{
+.List button {
   height: 50px;
   width: 75px;
   border: 0;
@@ -31,10 +31,9 @@ body {
   cursor: pointer;
   font-weight: bolder;
   color: black;
-  border-radius: 10px
-
+  border-radius: 10px;
 }
-.NewListItem{
+.NewListItem {
   background-color: rgba(166, 220, 236, 0.808);
   min-height: 900px;
   width: 650px;
@@ -42,63 +41,56 @@ body {
   font-style: italic;
   border-radius: 15px;
   box-shadow: 2px 7px 18px -12px;
-
 }
 
-
- .Navbar{
-   display: flex;
+.Navbar {
+  display: flex;
   justify-content: space-evenly;
   padding-top: 10px;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 2px 10px 18px -12px; color: rgb(10, 10, 10);
- }
-
- h5{
-   color:rgb(5, 7, 7)
- }
- .HomeImg{
-  width: 800px;
-  height: 500px;
-  padding: 40px;
-  margin-top: 10px;
-  text-align: center;
+  box-shadow: 2px 10px 18px -12px;
+  color: rgb(10, 10, 10);
 }
-.New-list{
+
+h5 {
+  color: rgb(5, 7, 7);
+}
+
+.New-list {
   width: 380px;
   height: 40px;
-   padding: 5px 10px;
+  padding: 5px 10px;
   font-size: 18px;
   margin: 10px auto;
   border-radius: 10px;
   background-color: rgb(241, 242, 245);
-  color:rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
 }
 
-.New-list input{
+.New-list input {
   background-color: transparent;
   border: 0;
   color: black;
-  font-size: 18px
+  font-size: 18px;
 }
-.New-list input:focus{
+.New-list input:focus {
   outline: none;
 }
-.New-list p{
-display: flex;
-justify-content: space-between;
-padding-bottom: 40px;
+.New-list p {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
 }
-.buttons{
+.buttons {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  top: -85px; 
+  top: -85px;
 }
 
-.all-todo{
+.all-todo {
   background-color: rgba(194, 194, 194, 0.637);
   min-height: 900px;
   width: 750px;
@@ -106,81 +98,73 @@ padding-bottom: 40px;
   font-style: italic;
   border-radius: 15px;
   box-shadow: 2px 7px 18px -12px;
-
 }
 
-@media screen and (min-width: 992px){
-
+@media (max-width: 1024px) {
+  .NewListItem {
+    display: flexbox;
+    max-height: 450px;
+    max-width: 650px;
+  }
+  .quoteBox {
+    display: flexbox;
+    max-width: 500px;
+    height: 400px;
+    padding-bottom: 80px;
+  }
+  .btnQuo {
+    font-size: 18px;
+  }
+  .HomeImg {
+    max-width: 650px;
+    max-height: 450px;
+  }
 }
 
 @media (max-width: 812px) {
-  body{
+  body {
     display: flexbox;
     justify-content: space-around;
   }
-  .header{
+  .header {
     display: flexbox;
-   
+
     align-items: stretch;
-   
   }
   .Navbar {
     display: flex-end;
     height: 80%;
     min-width: 130px;
   }
-  .icons{
+  .icons {
     height: 50px;
   }
-  .NewListItem{
+  .NewListItem {
     display: flexbox;
     max-height: 300px;
     max-width: 350px;
   }
-  .h1{
+  .h1 {
     font-size: 16px;
   }
-  .New-list{
+  .New-list {
     display: flexbox;
     width: 80%;
   }
-.all-todo{
-  max-width: 380px;
-}
-.quote-box{
-  max-width: 400px;
-}
-.quoteBox{
-  max-width: 300px;
-}
-}
-
- /* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .all-todo {
+    max-width: 380px;
   }
-} */
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .btnQuo {
+    font-size: 12px;
   }
-  to {
-    transform: rotate(360deg);
-  } 
-} */ 
+  .quoteBox {
+    display: flexbox;
+    max-width: 270px;
+    height: 380px;
+  }
+  .HomeImg {
+    max-width: 300px;
+    max-height: 250px;
+  }
+}

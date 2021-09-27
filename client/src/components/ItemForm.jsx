@@ -48,12 +48,12 @@ export default function ItemForm(props) {
           <div className="New-list" key={item.key}>
             <p>{item.fields.item}</p>
             <div className="buttons">
-              <Link to={`/todo/${category}/edit/${item.id}`}>
+              <Link to={`/todo/${category}/edit/${item.id}`} key={""}>
                 <button className="edit-btn">
-                  <i class="far fa-edit"></i>
+                  <i className="far fa-edit"></i>
                 </button>
               </Link>
-              <div className="delete-btn">
+              <div className="delete-btn" key={" "}>
                 <Delete id={item.id} setDeleted={setDeleted} />
               </div>
             </div>

@@ -12,7 +12,6 @@ const config = {
   },
 };
 export default function EditItem(props) {
-  const { todo } = props;
   const [item, setItem] = useState("");
   const { id, category } = useParams();
 

@@ -39,7 +39,11 @@ export default function Home() {
           <div className="author"> {author}</div>
         </div>
       </div>
-      {/* < img className="HomeImg" src="https://balancethroughsimplicity.com/wp-content/uploads/2020/04/How-to-write-a-To-Do-list-to-get-things-done-BLOG-1-884x619.jpg" alt="Photo"/> */}
+      <img
+        className="HomeImg"
+        src="https://balancethroughsimplicity.com/wp-content/uploads/2020/04/How-to-write-a-To-Do-list-to-get-things-done-BLOG-1-884x619.jpg"
+        alt="Photo"
+      />
     </div>
   );
 }
