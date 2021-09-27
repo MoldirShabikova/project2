@@ -19,13 +19,11 @@ export default function ItemForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(params.id);
 
     const fields = {
       item,
-      category: params.id,
+      category: params.category,
     };
-    console.log(fields);
     const res = await axios.post(URL, { fields }, config);
     setItem("");
     props.setToggle((toggle) => !toggle);
