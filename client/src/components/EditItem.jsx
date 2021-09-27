@@ -24,7 +24,7 @@ export default function EditItem(props) {
       setItem(res.data.fields.item);
     };
     fetchItem();
-  }, []);
+  }, [id]);
   const handleSubmit = async (e) => {
     e.preventDefault();
 

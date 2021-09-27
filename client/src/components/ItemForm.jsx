@@ -43,9 +43,9 @@ export default function ItemForm(props) {
         <br />
       </form>
 
-      {props.categoryList.map((item) => {
+      {props.categoryList.map((item, index) => {
         return (
-          <div className="New-list" key={item.key}>
+          <div className="New-list" key={index}>
             <p>{item.fields.item}</p>
             <div className="buttons">
               <Link to={`/todo/${category}/edit/${item.id}`} key={""}>
