@@ -1,6 +1,6 @@
 # Project Overview
 
-View -<https://github.com/MoldirShabikova/toDo-App>
+View -<https://sad-goldberg-fdd17e.netlify.app/>
 
 ## Project Name
 
